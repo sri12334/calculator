@@ -4,10 +4,17 @@ alert("Hello there, let'us build a calculator");
 let num1;
 let num2;
 let isValid = false;
+
 while (!isValid) {
   num1 = prompt('please entre your first number');
   num2 = prompt('please entre your second number');
-  if (!isNaN(num1) || !isNaN(num2)) {
+
+  if (num1 === null || num2 === null) {
+    alert('Input canceled. Please try again.');
+    continue;
+  }
+
+  if (!isNaN(num1) && !isNaN(num2)) {
     isValid = true; // Break out of the loop if both inputs are valid numbers
   } else {
     alert('Please enter valid numbers.');
