@@ -6,8 +6,8 @@ let num2;
 let isValid = false;
 
 while (!isValid) {
-  num1 = prompt('please entre your first number');
-  num2 = prompt('please entre your second number');
+  num1 = Number(prompt('please entre your first number'));
+  num2 = Number(prompt('please entre your second number'));
 
   if (num1 === null || num2 === null) {
     alert('Input canceled. Please try again.');
